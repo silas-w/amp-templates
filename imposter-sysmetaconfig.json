@@ -1,0 +1,7 @@
+[
+    {
+        "ConfigFile": "data/config.json",
+        "AutoMap": true,
+        "ConfigType": "json"
+    }
+]

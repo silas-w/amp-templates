@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": 7800,
+        "Ref": "ApplicationPort1",
+        "Name": "Spielport (TCP und UDP)",
+        "Description": "Anmeldung, Lobby und Chat über TCP, Positionen und Sprache über UDP. Diesen Port tragen Spieler im Spiel ein."
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 7880,
+        "Ref": "ApplicationPort2",
+        "Name": "Web-Admin (TCP)",
+        "Description": "Server Manager im Browser. Nur freigeben, wenn du ihn von außen brauchst."
+    }
+]

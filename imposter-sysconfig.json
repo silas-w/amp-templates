@@ -1,0 +1,208 @@
+[
+    {
+        "DisplayName": "Servername",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Server:dns:1",
+        "Description": "Name des Servers. Ihn sehen die Spieler in der Serverliste und in der Lobby.",
+        "Keywords": "servername",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.server_name",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Alles außer Lernen",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Whitelist",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Server:dns:1",
+        "Description": "An: Neue Spieler warten, bis du sie in der Konsole mit allow NAME zulässt. Aus: Jeder mit der Adresse kommt herein (das Lobby-Passwort schützt trotzdem).",
+        "Keywords": "whitelist",
+        "FieldName": "Whitelist",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.whitelist_required",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Portfreigabe am Router (UPnP)",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Server:dns:1",
+        "Description": "Nur für AMP zu Hause hinter einem Router, der UPnP kann. Auf Mietservern aus lassen und die Ports in der Firewall freigeben.",
+        "Keywords": "upnp",
+        "FieldName": "Upnp",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.upnp.enabled",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Standard-Lobby anlegen",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Lobby:groups:2",
+        "Description": "An: Beim Start gibt es eine Lobby mit den Werten unten; Änderungen hier gelten beim nächsten Start. Weitere Lobbys: lobby create in der Konsole.",
+        "Keywords": "lobbyenabled",
+        "FieldName": "LobbyEnabled",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.lobby.enabled",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Lobbyname",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Lobby:groups:2",
+        "Description": "Name der Standard-Lobby. Leer = Servername.",
+        "Keywords": "lobbyname",
+        "FieldName": "LobbyName",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.lobby.name",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {},
+        "Placeholder": "Klasse 10a"
+    },
+    {
+        "DisplayName": "Standard-Spielmodus",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Lobby:groups:2",
+        "Description": "Spielmodus der Standard-Lobby. Die Namen entsprechen dem Spielmenü.",
+        "Keywords": "lobbymode",
+        "FieldName": "LobbyMode",
+        "InputType": "enum",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.lobby.mode",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Level",
+        "EnumValues": {
+            "Level": "Level (Labs der Reihe nach, Level 1 bis 26)",
+            "Lernen": "Lernen (frei wählbare Aufgaben am PC)",
+            "Ultimate Figgo": "Ultimate Figgo (intern, im Mehrspieler-Menü des Spiels derzeit nicht wählbar)"
+        }
+    },
+    {
+        "DisplayName": "Level",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Lobby:groups:2",
+        "Description": "Start-Level im Modus Level (1 bis 26).",
+        "Keywords": "lobbylevel",
+        "FieldName": "LobbyLevel",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.lobby.level",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1",
+        "EnumValues": {},
+        "MinValue": "1",
+        "MaxValue": "26"
+    },
+    {
+        "DisplayName": "Lobby-Passwort",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Lobby:groups:2",
+        "Description": "Leer = ohne Passwort. Spieler geben es beim Beitritt im Spiel ein.",
+        "Keywords": "lobbypassword",
+        "FieldName": "LobbyPassword",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.lobby.password",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Max. Spieler",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Lobby:groups:2",
+        "Description": "Plätze in der Standard-Lobby (1 bis 9, die Neue Map hat 9 Räume).",
+        "Keywords": "lobbymaxplayers",
+        "FieldName": "LobbyMaxPlayers",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.lobby.max_players",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "9",
+        "EnumValues": {},
+        "MinValue": "1",
+        "MaxValue": "9"
+    },
+    {
+        "DisplayName": "Roboter-Hilfe",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Lobby:groups:2",
+        "Description": "Hilfe in der Standard-Lobby.",
+        "Keywords": "lobbyhelp",
+        "FieldName": "LobbyHelp",
+        "InputType": "enum",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.lobby.help",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "None",
+        "EnumValues": {
+            "None": "Keine Hilfe",
+            "Guide": "Leitfaden"
+        }
+    },
+    {
+        "DisplayName": "Web-Admin starten",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Web-Admin:admin_panel_settings:3",
+        "Description": "Server Manager im Browser unter http://SERVER-IP:Web-Admin-Port. Aus: nur die AMP-Konsole.",
+        "Keywords": "webadminenabled",
+        "FieldName": "WebAdminEnabled",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.manager_enabled",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Web-Admin: Benutzer",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Web-Admin:admin_panel_settings:3",
+        "Description": "Benutzername für die Anmeldung im Web-Admin.",
+        "Keywords": "webadminuser",
+        "FieldName": "WebAdminUser",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.admin.username",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "admin",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Web-Admin: Passwort",
+        "Category": "Alles außer Lernen:videogame_asset",
+        "Subcategory": "Web-Admin:admin_panel_settings:3",
+        "Description": "Mindestens 8 Zeichen. Der Server ersetzt es in config.json beim Start durch einen Hash. Leer: der Server erzeugt bei jedem Start ein neues und legt es in data/erstes_passwort.txt ab.",
+        "Keywords": "webadminpassword",
+        "FieldName": "WebAdminPassword",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.admin.password",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    }
+]
